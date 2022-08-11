@@ -1,4 +1,4 @@
-const { statement } = require('./statement');
+const { statement, getAmountByPlayType } = require('./statement');
 
 describe('statement', () => {
   describe('with tragedy', () => {
@@ -27,3 +27,11 @@ describe('statement', () => {
     });
   })
 });
+
+
+test('getAmountByPlayType', () => {
+  const playType = 'tragedy';
+  const performanceAudience = 1;
+
+  expect(getAmountByPlayType(playType, performanceAudience)).toBe(40000);
+})
